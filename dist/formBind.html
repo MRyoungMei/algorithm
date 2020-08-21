@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model='inputV' id="input1">
+        <label for="input1">{{inputV}}</label><br/>
+        <hr/>
+
+        <span v-for="people in peoples">
+                <li_item :people="people" :checkNames="checkNames" :key="people.id"></li_item>
+        </span>
+        <label>{{checkNames}}</label><br/>
+        <hr/>
+
+        <input type="radio" v-model='radioV' id="input5" value="true">
+        <label for="input5">true</label>
+        <input type="radio" v-model='radioV' id="input6" value="false">
+        <label for="input6">false</label><br/>
+        <label>{{radioV}}</label><br/>
+        <hr/>
+
+    </div>
+</body>
+<script src="vue.js"></script>
+<script src="jquery.js"></script>
+<script>
+    Vue.component("li_item", {
+        props: ['checkNames', 'people'],
+        template: "<input type='checkbox' v-model='checkNames' id='people.name' value='people.name'>" +
+            "<label for='people.name'>{{people.name}}</label>"
+    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            inputV: '',
+            checkNames: [],
+            radioV: '',
+            peoples: [{
+                name: 'tom',
+                id: 1
+            }, {
+                name: 'jack',
+                id: 2
+            }, {
+                name: 'jhon',
+                id: 3
+            }, ]
+        }
+    })
+</script>
+
+</html>
