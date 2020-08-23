@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <t-double-bind :number1='num1' :number2='num2' @numchange1='change1($event)' @numchange2='change2($event)'>
+    </t-double-bind>
+  </div>
+  <!-- <template id="t-double-bind">
+    <div>
+      <div>Props:{{number1}}</div>
+      <div>data:{{dnumber1}}</div>
+      <input type="text"  :value='dnumber1' @input='numchange1($event)'>
+      <div>Props{{number2}}</div>
+      <div>data{{dnumber2}}</div>
+      <input type="text"  :value='dnumber2' @input='numchange2($event)'>
+    </div>
+  </template> -->
+</body>
+<script src="../vue.js"></script>
+<script type="text/x-template" id="t-double-bind">
+  <div>
+    <div>Props:{{number1}}</div>
+    <div>data:{{dnumber1}}</div>
+    <input type="text"  :value='dnumber1' @input='numchange1($event)'>
+    <div>Props{{number2}}</div>
+    <div>data{{dnumber2}}</div>
+    <input type="text"  :value='dnumber2' @input='numchange2($event)'>
+  </div>
+</script>
+<script>
+  const app=new Vue({
+    el:'#app',
+    data:{
+      num1:0,
+      num2:1
+    },
+    methods:{
+      change1(value){
+        this.num1=parseInt(value);
+      },
+      change2(value){
+        this.num2=parseInt(value);
+      },
+    },
+    components:{
+      "t-double-bind":{
+        template:'#t-double-bind',
+        props:{
+          number1:Number,
+          number2:Number
+        },
+        data() {
+          return {
+            // dnumber1:this.props['number1'],
+            dnumber2:this.number2,
+            dnumber1:this.number1
+          }
+        },
+        methods: {
+          numchange1(event){
+            this.dnumber1=event.target.value;
+            this.$emit('numchange1',event.target.value);
+          } ,
+          numchange2(event){
+            this.dnumber2=event.target.value;
+            this.$emit('numchange2',event.target.value);
+          }
+        },
+      }
+    }
+  })
+</script>
+</html>
