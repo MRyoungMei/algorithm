@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>{{value}}</h1>
+    <button @click='getEvent'>根组件按钮</button>
+    <cpn ref="target" @my-event='cpn1'></cpn>
+    <cpn @my-event='cpn1'></cpn>
+    <cpn1 @my-event='cpn1'></cpn1>
+  </div>
+</body>
+<template id="cpn">
+  <div>
+    <div>组件1</div>
+    <div>{{value}}</div>
+    <button @click='cpn1'>按钮1</button>
+    <!-- <cpn @my-event='cpn2'></cpn> -->
+  </div>
+</template>
+<template id="cpn1">
+  <div>
+    <div>组件2</div>
+    <button @click='$emit("my-event",2)'>按钮2</button>
+  </div>
+</template>
+<script src="../vue.js"></script>
+<script>
+  new Vue({
+    el:'#app',
+    data:{
+      value:0
+    },
+    methods:{
+      getEvent(){
+        console.log(this.$refs.target)
+      },
+      cpn1(event){
+        console.log(event)
+      },
+      
+    },
+    components:{
+      'cpn':{
+        template:'#cpn',
+        data() {
+          return {
+            value:0
+          }
+        },
+        methods: {
+          cpn2(event){
+            console.log(event)
+          },
+          cpn1(){
+            // this.$emit('my-event',1);
+            console.log(this.$parent.value)
+          }
+        },
+      },
+      'cpn1':{
+            template:'#cpn1',
+        }
+    }
+  })
+</script>
+</html>
