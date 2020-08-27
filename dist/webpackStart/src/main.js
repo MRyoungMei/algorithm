@@ -4,3 +4,5 @@ import {minus} from './bb.js'
 
 add(30,20);
 minus(30,20);
+
+require('./test.css')
