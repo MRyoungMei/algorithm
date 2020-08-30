@@ -1,4 +1,5 @@
 const path=require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports={
   entry:'./src/main.js',
@@ -13,6 +14,7 @@ module.exports={
       {
         test: /\.css$/,
         use: [
+          { loader: 'vue-style-loader'},
           { loader: "style-loader" },
           { loader: "css-loader" }
         ]
@@ -39,17 +41,30 @@ module.exports={
           }
         ]
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /(node_modules|bower_components)/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       presets: ['es2015']
-      //     }
-      //   }
-      // }
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015']
+          }
+        }
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
     ]
-  }
+  },
+  resolve:{
+    alias:{
+      'vue$':"vue/dist/vue.esm.js"
+    }
+  },
+  plugins: [
+    // 请确保引入这个插件！
+    new VueLoaderPlugin()
+  ]
   
 }
