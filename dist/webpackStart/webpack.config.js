@@ -28,6 +28,7 @@ module.exports={
         }]
       },
       {
+<<<<<<< HEAD
         test: /\.(png|jpg|gif)$/,
         use: [
           {
@@ -49,7 +50,16 @@ module.exports={
       //     }
       //   }
       // }
+=======
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
+>>>>>>> 18768fc... 'init'
     ]
-  }
+  },
+  plugins: [
+    // 请确保引入这个插件！
+    new VueLoaderPlugin()
+  ]
   
 }
