@@ -39,16 +39,17 @@ module.exports={
           }
         ]
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /(node_modules|bower_components)/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       presets: ['es2015']
-      //     }
-      //   }
-      // }
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015']
+          }
+        }
+      }
+      ,{
         test: /\.vue$/,
         loader: 'vue-loader'
       }
