@@ -150,11 +150,11 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /*!*******************!*\
   !*** ./src/aa.js ***!
   \*******************/
-/*! exports provided: add */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"add\", function() { return add; });\nfunction add(num1,num2){\r\n  console.log(num1+num2)\r\n}\r\n\r\n// function add(num1,num2){\r\n//   console.log(num1+num2)\r\n// }\r\n\r\n// function minus(num1,num2){\r\n//   console.log(num1-num2)\r\n// }\r\n\r\n// module.exports={add,minus}\n\n//# sourceURL=webpack:///./src/aa.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.add = add;\nfunction add(num1, num2) {\n  console.log(num1 + num2);\n}\n\n// function add(num1,num2){\n//   console.log(num1+num2)\n// }\n\n// function minus(num1,num2){\n//   console.log(num1-num2)\n// }\n\n// module.exports={add,minus}\n\n//# sourceURL=webpack:///./src/aa.js?");
 
 /***/ }),
 
@@ -162,11 +162,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!*******************!*\
   !*** ./src/bb.js ***!
   \*******************/
-/*! exports provided: minus, a */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"minus\", function() { return minus; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return a; });\nfunction minus(num1,num2){\r\n  console.log(num1-num2)\r\n}\r\n\r\nconst a=true;\n\n//# sourceURL=webpack:///./src/bb.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.minus = minus;\nfunction minus(num1, num2) {\n  console.log(num1 - num2);\n}\n\nvar avddd = exports.avddd = true;\n\n//# sourceURL=webpack:///./src/bb.js?");
 
 /***/ }),
 
@@ -186,11 +186,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _aa_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./aa.js */ \"./src/aa.js\");\n/* harmony import */ var _bb_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bb.js */ \"./src/bb.js\");\n\r\n\r\n// const {add,minus}=require('./aa.js')\r\n\r\nObject(_aa_js__WEBPACK_IMPORTED_MODULE_0__[\"add\"])(30,20);\r\nObject(_bb_js__WEBPACK_IMPORTED_MODULE_1__[\"minus\"])(30,20);\r\nconsole.log(_bb_js__WEBPACK_IMPORTED_MODULE_1__[\"a\"]);\r\n\r\n__webpack_require__(/*! ./test.less */ \"./src/test.less\")\r\n__webpack_require__(/*! ./test.css */ \"./src/test.css\")\r\ndocument.writeln('hhhhhh')\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("\n\nvar _aa = __webpack_require__(/*! ./aa.js */ \"./src/aa.js\");\n\nvar _bb = __webpack_require__(/*! ./bb.js */ \"./src/bb.js\");\n\n// const {add,minus}=require('./aa.js')\n\n(0, _aa.add)(30, 20);\n(0, _bb.minus)(30, 20);\nconsole.log(_bb.avddd);\n\n__webpack_require__(/*! ./test.less */ \"./src/test.less\");\n__webpack_require__(/*! ./test.css */ \"./src/test.css\");\ndocument.writeln('hhhhhh');\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 

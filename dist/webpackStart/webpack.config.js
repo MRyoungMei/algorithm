@@ -1,4 +1,5 @@
 const path=require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports={
   entry:'./src/main.js',
@@ -48,8 +49,8 @@ module.exports={
             presets: ['es2015']
           }
         }
-      }
-      ,{
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader'
       }
