@@ -57,14 +57,11 @@ module.exports={
       }
     ]
   },
-<<<<<<< HEAD
   resolve:{
     alias:{
       'vue$':"vue/dist/vue.esm.js"
     }
   },
-=======
->>>>>>> dev_notebook
   plugins: [
     // 请确保引入这个插件！
     new VueLoaderPlugin()
