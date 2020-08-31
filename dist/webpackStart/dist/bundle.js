@@ -329,7 +329,11 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.minus = minus;\nfunction minus(num1, num2) {\n  console.log(num1 - num2);\n}\n\nvar indivale = exports.indivale = true;\n\n//# sourceURL=webpack:///./src/bb.js?");
+=======
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.minus = minus;\nfunction minus(num1, num2) {\n  console.log(num1 - num2);\n}\n\nvar avddd = exports.avddd = true;\n\n//# sourceURL=webpack:///./src/bb.js?");
+>>>>>>> dev_notebook
 
 /***/ }),
 
@@ -353,7 +357,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 eval("\n\nvar _aa = __webpack_require__(/*! ./aa.js */ \"./src/aa.js\");\n\nvar _bb = __webpack_require__(/*! ./bb.js */ \"./src/bb.js\");\n\nvar _vuetest = __webpack_require__(/*! ./vuetest */ \"./src/vuetest.js\");\n\nvar _vuetest2 = _interopRequireDefault(_vuetest);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// const {add,minus}=require('./aa.js')\n\n(0, _aa.add)(30, 20);\n(0, _bb.minus)(30, 20);\n\n__webpack_require__(/*! ./test.less */ \"./src/test.less\");\n__webpack_require__(/*! ./test.css */ \"./src/test.css\");\n\n//# sourceURL=webpack:///./src/main.js?");
+=======
+eval("\n\nvar _aa = __webpack_require__(/*! ./aa.js */ \"./src/aa.js\");\n\nvar _bb = __webpack_require__(/*! ./bb.js */ \"./src/bb.js\");\n\n// const {add,minus}=require('./aa.js')\n\n(0, _aa.add)(30, 20);\n(0, _bb.minus)(30, 20);\nconsole.log(_bb.avddd);\n\n__webpack_require__(/*! ./test.less */ \"./src/test.less\");\n__webpack_require__(/*! ./test.css */ \"./src/test.css\");\ndocument.writeln('hhhhhh');\n\n//# sourceURL=webpack:///./src/main.js?");
+>>>>>>> dev_notebook
 
 /***/ }),
 
