@@ -1,12 +1,14 @@
 const path=require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const webpack = require("webpack");
+const html_plugin=require("html-webpack-plugin");
 
 module.exports={
   entry:'./src/main.js',
   output:{
     path:path.resolve(__dirname,'dist'),
     filename:'bundle.js',
-    publicPath:'dist/'
+    // publicPath:'dist/'
   },
   mode:'development',
   module:{
@@ -58,7 +60,9 @@ module.exports={
   },
   plugins: [
     // 请确保引入这个插件！
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new webpack.BannerPlugin("最终解释权归MRyoung所有"),
+    new html_plugin("./index.html")
   ]
   
 }
