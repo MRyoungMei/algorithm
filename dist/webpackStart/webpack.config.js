@@ -65,6 +65,7 @@ module.exports={
   plugins: [
     // 请确保引入这个插件！
     new VueLoaderPlugin()
-  ]
+  ],
+  devtool: 'inline-source-map', 
   
 }

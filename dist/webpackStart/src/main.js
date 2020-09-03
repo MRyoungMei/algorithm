@@ -1,9 +1,14 @@
-import {add} from './aa.js'
-import {minus,avddd} from './bb.js'
+import Vue from 'vue';
+import Antd from 'ant-design-vue';
+import App from './App.vue';
+import 'ant-design-vue/dist/antd.css';
+Vue.config.productionTip = false;
 
-add(30,20);
-minus(30,20);
-console.log(avddd);
+Vue.use(Antd);
 
-require('./test.less')
-require('./test.css')
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>',
+});
