@@ -73,13 +73,17 @@ export default {
     };
   },
   created(){
-  axios.post('http://localhost/list')
+  axios.get('http://localhost/list')
   .then(function (response) {
-    console.log(response);
+    console.log(response.data["data"]);
   })
   .catch(function (error) {
-    console.log(error);
+    // console.log(error);
   });
+  // $.get("http://localhost/list",
+  //   function(data,status){
+  //       alert("数据: \n" + data + "\n状态: " + status);
+  //   });
   }
 };
 </script>

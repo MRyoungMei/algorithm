@@ -4,9 +4,9 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 module.exports={
   entry:'./src/main.js',
   output:{
-    path:path.resolve(__dirname,'dist'),
+    path:path.resolve(__dirname,'../dist'),
     filename:'bundle.js',
-    publicPath:'dist/'
+    // publicPath:'dist/'
   },
   mode:'development',
   module:{
@@ -66,6 +66,4 @@ module.exports={
     // 请确保引入这个插件！
     new VueLoaderPlugin()
   ],
-  devtool: 'inline-source-map', 
-  
 }
