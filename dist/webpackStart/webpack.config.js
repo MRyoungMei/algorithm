@@ -10,6 +10,11 @@ module.exports={
     filename:'bundle.js',
     // publicPath:'dist/'
   },
+  resolve:{
+    alias:{
+      "vue$":"vue/dist/vue.esm.js"
+    },
+  },
   mode:'development',
   module:{
     rules: [
@@ -62,7 +67,9 @@ module.exports={
     // 请确保引入这个插件！
     new VueLoaderPlugin(),
     new webpack.BannerPlugin("最终解释权归MRyoung所有"),
-    new html_plugin("./index.html")
+    new html_plugin({
+      template:"index.html"
+    })
   ]
   
 }
