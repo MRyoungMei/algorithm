@@ -9,14 +9,6 @@ module.exports={
     path:path.resolve(__dirname,'../dist'),
     filename:'bundle.js',
     // publicPath:'dist/'
-<<<<<<< HEAD:dist/webpackStart/webpack.config.js
-  },
-  resolve:{
-    alias:{
-      "vue$":"vue/dist/vue.esm.js"
-    },
-=======
->>>>>>> 6859ff30514302e6dcb5c26e8d7eeff9ca492751:dist/webpackStart/build/base.config.js
   },
   mode:'development',
   module:{
@@ -74,16 +66,6 @@ module.exports={
   },
   plugins: [
     // 请确保引入这个插件！
-<<<<<<< HEAD:dist/webpackStart/webpack.config.js
-    new VueLoaderPlugin(),
-    new webpack.BannerPlugin("最终解释权归MRyoung所有"),
-    new html_plugin({
-      template:"index.html"
-    })
-  ]
-  
-=======
     new VueLoaderPlugin()
   ],
->>>>>>> 6859ff30514302e6dcb5c26e8d7eeff9ca492751:dist/webpackStart/build/base.config.js
 }
